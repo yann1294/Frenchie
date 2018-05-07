@@ -11,6 +11,17 @@ public class Word {
 
     /* french translation for the word */
     private String mFrenchTranslation;
+    /* * Image resource ID for the word */
+    private int mImageResourceId = NO_IMAGE_PROVIDED;
+    //constant checking if the word has an image or not
+    private static final int NO_IMAGE_PROVIDED = -1;
+    /**
+     *
+     * @return image resource ID for the word
+     */
+    public int getImageResourceId() {
+        return mImageResourceId;
+    }
 
     /**
      * Parameterized constructor
@@ -20,6 +31,18 @@ public class Word {
     public Word(String defaultTranslation, String frenchTranslation) {
         mDefaultTranslation = defaultTranslation;
         mFrenchTranslation = frenchTranslation;
+    }
+
+    /**
+     *
+     * @param defaultTranslation holds the default translation of the word.
+     * @param frenchTranslation  holds the default translation of the word.
+     * @param imageResourceId holds the image for the word.
+     */
+    public Word(String defaultTranslation, String frenchTranslation, int imageResourceId) {
+        mDefaultTranslation = defaultTranslation;
+        mFrenchTranslation = frenchTranslation;
+        mImageResourceId = imageResourceId;
     }
 
     /**
@@ -36,5 +59,14 @@ public class Word {
      */
     public String getFrenchTranslation() {
         return mFrenchTranslation;
+    }
+
+    /**
+     *
+     * @return whether or not there are an image for
+     * this word.
+     */
+    public boolean hasImage(){
+        return mImageResourceId != NO_IMAGE_PROVIDED;
     }
 }

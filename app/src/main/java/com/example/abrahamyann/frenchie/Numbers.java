@@ -14,16 +14,17 @@ public class Numbers extends AppCompatActivity {
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("One","Un"));
-        words.add(new Word("Two","Deux"));
-        words.add(new Word("Three","Trois"));
-        words.add(new Word("Four","Quatres"));
-        words.add(new Word("Five","Cinq"));
-        words.add(new Word("Six","Six"));
-        words.add(new Word("Seven","Sept"));
-        words.add(new Word("Eight","Huit"));
-        words.add(new Word("Nine","Neuf"));
-        words.add(new Word("Ten","Dix"));
+        words.add(new Word("One","Un",R.drawable.number_one));
+        words.add(new Word("Two","Deux",R.drawable.number_two));
+        words.add(new Word("Three","Trois",R.drawable.number_three));
+        words.add(new Word("Four","Quatres",R.drawable.number_four));
+        words.add(new Word("Five","Cinq",R.drawable.number_five));
+        words.add(new Word("Six","Six",R.drawable.number_six));
+        words.add(new Word("Seven","Sept",R.drawable.number_seven));
+        words.add(new Word("Eight","Huit",R.drawable.number_eight));
+        words.add(new Word("Nine","Neuf",R.drawable.number_nine));
+        words.add(new Word("Ten","Dix",R.drawable.number_ten));
+        /*
         words.add(new Word("Eleven","Onze"));
         words.add(new Word("Twelve","Douze"));
         words.add(new Word("Thirteen","Treize"));
@@ -34,11 +35,12 @@ public class Numbers extends AppCompatActivity {
         words.add(new Word("Eightteen","Dix-Huit"));
         words.add(new Word("Nineteen","Dix-Neuf"));
         words.add(new Word("Twenty","vingt"));
+        */
 
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter wordAdapter = new WordAdapter(this,words);
+        WordAdapter wordAdapter = new WordAdapter(this,words,R.color.category_numbers);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the

@@ -13,21 +13,21 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("Dad","Papa"));
-        words.add(new Word("Mom","Maman"));
-        words.add(new Word("Elder brother","Grand-frere"));
-        words.add(new Word("Elder sister","Grande-soeur"));
-        words.add(new Word("Little brother","Petit-frere"));
-        words.add(new Word("Little sister","Petite-soeur"));
-        words.add(new Word("Grandfather","Grand-pere"));
-        words.add(new Word("GrandMother","Grand-mere"));
-        words.add(new Word("Uncle","Oncle"));
-        words.add(new Word("Aunt","Tante"));
+        words.add(new Word("Dad","Papa",R.drawable.family_father));
+        words.add(new Word("Mom","Maman",R.drawable.family_mother));
+        words.add(new Word("Elder brother","Grand-frere",R.drawable.family_older_brother));
+        words.add(new Word("Elder sister","Grande-soeur",R.drawable.family_older_sister));
+        words.add(new Word("Little brother","Petit-frere",R.drawable.family_younger_brother));
+        words.add(new Word("Little sister","Petite-soeur",R.drawable.family_older_sister));
+        words.add(new Word("Grandfather","Grand-pere",R.drawable.family_grandfather));
+        words.add(new Word("GrandMother","Grand-mere",R.drawable.family_grandmother));
+        words.add(new Word("Son","Fils",R.drawable.family_son));
+        words.add(new Word("Daughter","Fille",R.drawable.family_daughter));
 
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter wordAdapter = new WordAdapter(this,words);
+        WordAdapter wordAdapter = new WordAdapter(this,words,R.color.category_family);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
